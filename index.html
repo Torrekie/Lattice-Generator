@@ -173,22 +173,20 @@
             if (request != null) {
                 request.open("GET", "res/CustomNameStrings.json", false);
                 request.send(null);
-                //200 here was not a magic number, it represents "OK" in HTTP Status Code.
-                if (request.status == 200) {
-                    var name = JSON.parse(request.responseText).nouns;
-                    var btn = document.getElementById("namebutton");
-                    var span = document.getElementById("namebutton_span");
-                    span.innerHTML=name[Math.floor(Math.random() * (name.length))] + name[Math.floor(Math.random() * (name.length))];
-                } else {
-                    alert("Status: " + request.status + "\nResponse: " + request.responseText);
+                request.onload = function() {
+                    //200 here was not a magic number, it represents "OK" in HTTP Status Code.
+                    if (request.status == 200) {
+                        var name = JSON.parse(request.responseText).nouns;
+                        var btn = document.getElementById("namebutton");
+                        var span = document.getElementById("namebutton_span");
+                        span.innerHTML=name[Math.floor(Math.random() * (name.length))] + name[Math.floor(Math.random() * (name.length))];
+                    } else {
+                        alert("Status: " + request.status + "\nResponse: " + request.responseText);
+                    }
                 }
             } else {
                 alert("Your environment does not support XMLHTTP.");
             }
-            /*
-            request.onload = function() {
-                
-            }*/
         }
 
         function onLoad(random) {
