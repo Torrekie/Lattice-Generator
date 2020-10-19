@@ -155,28 +155,41 @@
         }
 
 
-        function onName(){
-       //语料来自往期分析
-       //Torrekie: We should always avoid putting all the resources into one file, I moved the content of variable 'name' to res/CustomNameStrings.json
-       //Also, POS(Part of Speech) has been classified.
-       //Oh sucks, I realized I'm not writing Node.js, local testing was unable to read files because browsers doesn't like it if you didn't disable security.
-       //I will comment those code if Git Page can't solve this issue.
-       //GIT PAGE TESTING PASSED
-       var request = new XMLHttpRequest();
-       request.open("get", "res/CustomNameStrings.json");
-       request.send(null);
-       request.onload = function() {
-           //200 here was not a magic number, it represents "OK" in HTTP Status Code.
-           if (request.status == 200) {
-               var name = JSON.parse(request.responseText).nouns;
-               var btn = document.getElementById("namebutton");
-               var span = document.getElementById("namebutton_span");
-               span.innerHTML=name[Math.floor(Math.random() * (name.length))] + name[Math.floor(Math.random() * (name.length))];
-           } else {
-               alert("Status: " + request.status + "\nResponse: " + request.responseText);
-           }
-       }
-    }
+        function onName() {
+            //语料来自往期分析
+            //Torrekie: We should always avoid putting all the resources into one file, I moved the content of variable 'name' to res/CustomNameStrings.json
+            //Also, POS(Part of Speech) has been classified.
+            //Oh sucks, I realized I'm not writing Node.js, local testing was unable to read files because browsers doesn't like it if you didn't disable security.
+            //I will comment those code if Git Page can't solve this issue.
+            //GIT PAGE TESTING PASSED
+            var request;
+            if (window.XMLHttpRequest) {
+                // code for all new browsers
+                request = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                // code for IE5 and IE6
+                request = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            if (request != null) {
+                request.open("GET", "res/CustomNameStrings.json", false);
+                request.send(null);
+                //200 here was not a magic number, it represents "OK" in HTTP Status Code.
+                if (request.status == 200) {
+                    var name = JSON.parse(request.responseText).nouns;
+                    var btn = document.getElementById("namebutton");
+                    var span = document.getElementById("namebutton_span");
+                    span.innerHTML=name[Math.floor(Math.random() * (name.length))] + name[Math.floor(Math.random() * (name.length))];
+                } else {
+                    alert("Status: " + request.status + "\nResponse: " + request.responseText);
+                }
+            } else {
+                alert("Your environment does not support XMLHTTP.");
+            }
+            /*
+            request.onload = function() {
+                
+            }*/
+        }
 
         function onLoad(random) {
             //---------------------------------------------------------准备颜色、密度、按钮显示-------------------------------------
