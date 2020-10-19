@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="js/html2canvas.min.js"></script>
         <script src="js/rgbcolor.js"></script>
         <script src="js/canvg.js"></script>
         <!-- <script  src="js/Vibrant.js"></script>
         <script src="js/Vibrant.min.js"></script>
         <script type="text/javascript" src="js/rgbaster.js"></script>  -->
-        <link type="text/css" rel="stylesheet" href="css/style_A.css">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link type="text/css" rel="stylesheet" href="css/style_A.css" />
+        <link rel="shortcut icon" href="favicon.ico" />
         <title>格纹宝 Plaid Generator</title>
     </head>
     <body style="text-align:center;width: 100%;height:100%">
@@ -60,99 +60,103 @@
             </div>
         </div>
         <a href="https://space.bilibili.com/421178217">
-            <img src="img/moonmooncha.png" alt="原作者：月亮猹" style="position: fixed;  bottom: 0px;left:46%;width: 50px;height:20px;"></img>
+            <img src="img/moonmooncha.png" alt="原作者：月亮猹" style="position: fixed;  bottom: 0px;left:42%;width: 50px;height:20px;"></img>
         </a>
+        <a href="https://space.bilibili.com/169414691" alt="维护：托莱奇" style="position: fixed;  bottom: 0px;left:50%;width: 50px;height:20px;">托莱奇</a>
     </body>
 
 
     <script type="text/javascript">
- //--------------------手机orPC识别--------------------
+    
+     //--------------------手机orPC识别--------------------
     //User-Agent作为识别方式在这种前端为主的项目中并不是很好的选择，该方式存在一个问题，即可能无法完全正确识别QQ/微信/B站/知乎等应用程序内置浏览器。
     //正确的方法应该是根据页面尺寸进行样式的变化，同时该改动便于在PC端进行自适应的调试。
-        var browser={
+    var browser={
             versions:function(){
-               var u = navigator.userAgent, app = navigator.appVersion;
-                //移动设备浏览器版本信息
-                return {
-                    //IE内核
-                    trident: u.indexOf('Trident') > -1,
-                    //opera内核      
-                    presto: u.indexOf('Presto') > -1,
-                    //苹果、谷歌内核          
-                    webKit: u.indexOf('AppleWebKit') > -1,
-                    //火狐内核
-                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
-                    //是否为移动终端
-                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), 
-                    //ios终端
-                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-                    //android终端或者uc浏览器
-                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
-                    //是否为iPhone或者QQHD浏览器
-                    iPhone: u.indexOf('iPhone') > -1 , 
-                    //是否iPad           
-                    iPad: u.indexOf('iPad') > -1,
-                    //是否web应该程序，没有头部与底部
-                    webApp: u.indexOf('Safari') == -1
-                };
-            }(), 
-            language:(navigator.browserLanguage || navigator.language).toLowerCase()  
-        }   
-           
-        if(browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
-                cssChange();     
-        }  
-         
-        function cssChange(){
-            var link = document.getElementsByTagName('link')[0];
-            //PC端应用的样式文件：style_A.css
-            //Mobile端应用样式文件：style_B.css
-            //注意保持link0是style
-            link.setAttribute('href','css/style_B.css');
-            console.log(document.getElementsByTagName('link')[0]);
-  
-           
-        }
-         
- </script>
+                   var u = navigator.userAgent, app = navigator.appVersion;
+                    //移动设备浏览器版本信息
+                    return {
+                            //IE内核
+                            trident: u.indexOf('Trident') > -1,
+                            //opera内核
+                            presto: u.indexOf('Presto') > -1,
+                            //苹果、谷歌内核
+                            webKit: u.indexOf('AppleWebKit') > -1,
+                            //火狐内核
+                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                            //是否为移动终端
+                            mobile: !!u.match(/AppleWebKit.*Mobile.*/),
+                            //ios终端
+                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                                                       //android终端或者uc浏览器
+                                                       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                                                       //是否为iPhone或者QQHD浏览器
+                                                       iPhone: u.indexOf('iPhone') > -1 ,
+                                                       //是否iPad
+                                                       iPad: u.indexOf('iPad') > -1,
+                                                       //是否web应该程序，没有头部与底部
+                                                       webApp: u.indexOf('Safari') == -1
+                                                   };
+                                               }(),
+                                               language:(navigator.browserLanguage || navigator.language).toLowerCase()
+                                           }
+                                              
+                                           if(browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad){
+                                               cssChange();
+                                           }
+                                            
+                                           function cssChange(){
+                                               var link = document.getElementsByTagName('link')[0];
+                                               //PC端应用的样式文件：style_A.css
+                                               //Mobile端应用样式文件：style_B.css
+                                           //注意保持link0是style
+                                            link.setAttribute('href','css/style_B.css');
+                                           console.log(document.getElementsByTagName('link')[0]);
+                                           
+                                              
+                                           }
+                                            //Torrekie: 以及另外一件事情，我也不知道为什么它会格式化成这个鬼模样
+    </script>
 
 
 
 
 
     <script type="text/javascript">
-    //---------------------------------------界面按钮功能触发--------------------------------------
+        //---------------------------------------界面按钮功能触发--------------------------------------
         function FAQ() {
             alert("Q:图片可以下载吗？\nA:由于开发时间有限，您只能截图（无限高清放大）而不是直接下载图片。\nQ:如何制作格裙样机？\nA:。\nQ:如何制作格裙？\nA:找别人帮你做。\nQ:成图可以商用吗？\nA:我认为店主不会要。\nQ:这个工具怎么使用？\nA:点击页面下方\'月亮猹\'观看教程视频。\nQ:为什么有的图有bug？\nA:因为开发者累了。\nQ:你还有什么问题？\nA:你没有了。");
         }
-        function onMask(isMaskOn) {
-            var MaskArray = [ "bag", "Bigunderpants", "bottle", "bowtie", "camera", "fakeskirt", "notebook", "Ordinaryskirt" ];
-            if (isMaskOn) {
-                var parent = document.getElementById("img_mask");
-                var maskimg = document.getElementById("img_current");
-                if (maskimg) { //替换
-                    var masknumber = Math.ceil(Math.random()*MaskArray.length);
-                    maskimg.src = "img/" + MaskArray[masknumber-1] + ".png"; //随机mask
-                } else {  //新建
-                    var maskimg = document.createElement("img");
-                    var masknumber = Math.ceil(Math.random()*MaskArray.length);
-                    maskimg.id = "img_current";
-                    maskimg.src = "img/" + MaskArray[masknumber-1] + ".png"; //随机mask
-                    if (window.innerWidth<window.innerHeight) {
-                        maskimg.width = window.innerHeight*0.26+1;  //比svg稍微大一些
-                        maskimg.height = window.innerHeight*0.26+1;
-                    } else {
-                        maskimg.width = window.innerWidth*0.26+1;
-                        maskimg.height = window.innerWidth*0.26+1;
-                    }
-                    parent.appendChild(maskimg);
-                }
-            } else {  //取消
+    function onMask(isMaskOn) {
+        var MaskArray = [ "bag", "Bigunderpants", "bottle", "bowtie", "camera", "fakeskirt", "notebook", "Ordinaryskirt" ];
+        if (isMaskOn) {
+            var parent = document.getElementById("img_mask");
+            var maskimg = document.getElementById("img_current");
+            var lastOne;
+            if (maskimg) { //替换
+                var masknumber = Math.ceil(Math.random()*MaskArray.length);
+                lastOne = masknumber;
+                maskimg.src = "img/" + MaskArray[masknumber-1] + ".png"; //随机mask
+            } else {  //新建
                 var maskimg = document.createElement("img");
-                var maskimg = document.getElementById("img_current");
-                maskimg.src = "img/none.png"; //none
+                var masknumber = Math.ceil(Math.random()*MaskArray.length);
+                maskimg.id = "img_current";
+                maskimg.src = "img/" + MaskArray[masknumber-1] + ".png"; //随机mask
+                if (window.innerWidth<window.innerHeight) {
+                    maskimg.width = window.innerHeight*0.26+1;  //比svg稍微大一些
+                    maskimg.height = window.innerHeight*0.26+1;
+                } else {
+                    maskimg.width = window.innerWidth*0.26+1;
+                    maskimg.height = window.innerWidth*0.26+1;
+                }
+                parent.appendChild(maskimg);
             }
+        } else {  //取消
+            var maskimg = document.createElement("img");
+            var maskimg = document.getElementById("img_current");
+            maskimg.src = "img/none.png"; //none
         }
+    }
 
 
         function onName() {
@@ -185,10 +189,6 @@
             } else {
                 alert("Your environment does not support XMLHTTP.");
             }
-            /*
-            request.onload = function() {
-                
-            }*/
         }
 
         function onLoad(random) {
@@ -646,3 +646,5 @@
  </script>-->
 
 <!--Torrekie: 2020.10.18 2:40 该项目整体毫无代码规范可言，除大量不工整书写外，出现数量极多的严重低级错误导致影响编辑与项目的实际执行。JS代码过于冗杂，后续我会进行优化修复。大量的JS/CSS置入HTML文件中对项目维护极为不利，在本次修改中我将CSS与HTML分离，并修复了出现在HTML中的多项错误。同时将Q&A更改为弹窗（鼠标悬置提示在移动设备不可用）。-->
+
+<!--Torrekie: 2020.10.20 6:53 一时间实在不知道从什么地方下手了，因为改起来确实很费力气。不过月亮猹已经做到一定程度的格式化和文件分离，目前先不pull request，以同步更新为主。-->
