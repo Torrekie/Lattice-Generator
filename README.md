@@ -8,6 +8,10 @@ The original author of this project seems unwilling to waste so much time on mai
 
 This project DID NOT HAVE ANY LICENSE GRANTED ORIGINALLY, so I would prefer to make it public under Creative Common BY 4.0 License.
 
+## Current Status
+
+The original project is still updating, this fork will continue after it stopped.
+
 ## TODO List
 - [x] Create README
 - [ ] Responsive Interface for mobile devices.
@@ -33,6 +37,10 @@ This project DID NOT HAVE ANY LICENSE GRANTED ORIGINALLY, so I would prefer to m
 原作者看起来并不希望在维护此项目上浪费过多时间，尽管有关的视频在本人创建此分支前6个小时就已经发布了。
 
 原项目并未被赋予任何协议，所以我倾向遵守知识共享许可协议-署名4.0公开。
+
+## 当前状态
+
+原项目仍在更新，该分支将在原项目停止后开始。
 
 ## 计划表
 - [x] 创建README
