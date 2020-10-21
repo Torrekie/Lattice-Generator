@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+        <meta name="viewport" content="width=device-width, user-scalable=yes" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="js/main.js"></script>
         <script src="js/html2canvas.min.js"></script>
@@ -11,53 +11,39 @@
         <!-- <script  src="js/Vibrant.js"></script>
         <script src="js/Vibrant.min.js"></script>
         <script type="text/javascript" src="js/rgbaster.js"></script>  -->
-        <link type="text/css" rel="stylesheet" href="css/main.css" />
         <link rel="shortcut icon" href="favicon.ico" />
         <title>格纹宝 Plaid Generator</title>
     </head>
-    <body style="text-align:center;width: 100%;height:100%">
-        <div class="parent">
-            <div class="white" id="white">
-                <a href="http://www.matools.com/image-color/?embed" target="_blank">
-                    <button class="uplobutton" title="上传图片，取出主色，请记下三种颜色，以便生成格纹">提取图片色</button>
-                </a>
-                <button class="probutton" onclick="FAQ()" title="">Q&#38;A</button>
-
-                <div class="maskbutton_DIV">
-                    <!-- <img src="img/maskico.ico" id="mask_ico" style="position: absolute;  width: 20px;margin-top: 20px;margin-left: 10px;"/> -->
-                    <button class="maskbutton" id="maskbutton1" title="每次点击，都能随机生成一个遮罩，如果您感觉卡住了，那只是随机到了同一个遮罩哦~" onclick="onMask(1)">Mask</button>
-                    <!--<img src="img/delmaskico.ico" id="mask_ico" style="position: absolute;  width: 20px;margin-top: 19px;margin-left: 7px;"/>-->
-                    <button class="maskbutton" id="maskbutton2" onclick="onMask(0)">No Mask</button>
-                    <!--Torrekie: THOSE ICONS SUCKS-->
-                </div>
-
-                <div id="name_DIV">
-                    <button id="namebutton" onclick="onName(0)">随机取名</button>
-                    <span id="namebutton_span" value="name">   </span>
-                </div>
-
-            </div>
-
-            <div class="lattice" id="div_svg">
-                <div id="title_Div">
-                    <img src="img/latt.png" id="title_img" alt="title" style="position: relative;  width: 100%;"/>
-                </div>
-                <div id="svg_img">
-                    <svg id="svg_my" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
-                    <div class="maskimg" id="img_mask"></div>
-                </div>
-                <div class="capture" id="capture">
-                    <!-- <h4 style="color: #000; ">Hello world!</h4> -->
-                    <input class="colorbutton" type="color" title="背景色"id="color1" value="#ffcccc" />
-                    <input class="colorbutton" type="color" title="主色1" id="color2" value="#DA70D6"/>
-                    <input class="colorbutton" type="color" title="主色2" id="color3" value="#e5ffe5"/>
-                    <form id="colorCnotroll" title="随机辅助色">
-                    </form>
-                    <input class="GeButton" type="button" id="GeButton1" title="随机生成颜色、密度、条纹位置" value="Full-Auto（全随机）" onclick="onLoad(1)">
-                    </input>
-                    <input type="number" id="numbercolor" title="格纹密度上限" value="3"/>
-                    <input class="GeButton" type="button" id="GeButton2" title="您可以在上方自定义三个主色以及条纹密度，随机生成辅色和条纹位置" value="Semi-Auto(半随机)"  onclick="onLoad(0)" />
-                </div>
+    <body>
+        <a href="http://www.matools.com/image-color/?embed" target="_blank">
+            <button title="上传图片，取出主色，请记下三种颜色，以便生成格纹">提取图片色</button>
+        </a>
+        <button onclick="FAQ()" title="">Q&#38;A</button>
+        
+        <!-- <img src="img/maskico.ico" id="mask_ico" style="position: absolute;  width: 20px;margin-top: 20px;margin-left: 10px;"/> -->
+        <button id="maskbutton1" title="每次点击，都能随机生成一个遮罩，如果您感觉卡住了，那只是随机到了同一个遮罩哦~" onclick="onMask(1)">Mask</button>
+        <!--<img src="img/delmaskico.ico" id="mask_ico" style="position: absolute;  width: 20px;margin-top: 19px;margin-left: 7px;"/>-->
+        <button id="maskbutton2" onclick="onMask(0)">No Mask</button>
+        <!--Torrekie: THOSE ICONS SUCKS-->
+        
+        <button id="namebutton" onclick="onName(0)">随机取名</button>
+        <span id="namebutton_span" value="name">   </span>
+        
+        <input type="color" title="背景色" id="color1" value="#ffcccc"/>
+        <input type="color" title="主色1" id="color2" value="#DA70D6"/>
+        <input type="color" title="主色2" id="color3" value="#e5ffe5"/>
+        <form id="colorCnotroll" title="随机辅助色">
+        </form>
+        <input type="button" id="GeButton1" title="随机生成颜色、密度、条纹位置" value="Full-Auto（全随机）" onclick="onLoad(1)">
+        </input>
+        <input type="number" id="numbercolor" title="格纹密度上限" value="3"/>
+        <input type="button" id="GeButton2" title="您可以在上方自定义三个主色以及条纹密度，随机生成辅色和条纹位置" value="Semi-Auto(半随机)"  onclick="onLoad(0)" />
+        
+        
+        <div id="div_svg" style="position:absolute;">
+            <div id="svg_img">
+                <svg id="svg_my" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+                <div id="img_mask" style="z-index: 1; position: absolute; left:0px; top:0px;"></div>
             </div>
         </div>
         <a href="https://space.bilibili.com/421178217">
