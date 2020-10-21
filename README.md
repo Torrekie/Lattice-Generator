@@ -1,5 +1,7 @@
 # Lattice-Generator
 An auto lattice generator forked from MoonMoonCha
+## Demonstration
+[CLICK HERE](https://torrekie.github.io/Lattice-Generator)
 ## License and Declaration
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lattice Generator</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Torrekie/Lattice-Generator" property="cc:attributionName" rel="cc:attributionURL">Torrekie</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://moonmooncha.github.io/Lattice-Generator" rel="dct:source">https://moonmooncha.github.io/Lattice-Generator</a>.
 ## Why forks this project?
@@ -10,7 +12,7 @@ This project DID NOT HAVE ANY LICENSE GRANTED ORIGINALLY, so I would prefer to m
 
 ## Current Status
 
-The original project is still updating, this fork will continue after it stopped.
+The original project stopped for 2 days, this fork will continue after it confirm stopped.
 
 ## TODO List
 - [x] Create README
@@ -31,6 +33,8 @@ The original project is still updating, this fork will continue after it stopped
 
 # 方格纹生成器
 一个自动的方格纹理生成工具，作为MoonMoonCha版本下的分支。
+## 演示
+[点击这里](https://torrekie.github.io/Lattice-Generator)
 ## 授权协议/创作声明
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lattice Generator</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Torrekie/Lattice-Generator" property="cc:attributionName" rel="cc:attributionURL">Torrekie</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享 署名 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://moonmooncha.github.io/Lattice-Generator" rel="dct:source">https://moonmooncha.github.io/Lattice-Generator</a>上的作品创作。
 ## 为什么创建该分支？
@@ -40,7 +44,7 @@ The original project is still updating, this fork will continue after it stopped
 
 ## 当前状态
 
-原项目仍在更新，该分支将在原项目停止后开始。
+原项目已停止2天，该分支将在原项目确认停止后开始。
 
 ## 计划表
 - [x] 创建README
