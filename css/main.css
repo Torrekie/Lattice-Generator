@@ -41,8 +41,9 @@
 
 
 	#svg_img{
-		position: relative;
-		height:78%;
+		margin: auto;
+		position: center;
+		height:auto;
 
 	}
 	#svg_my{
