@@ -12,7 +12,9 @@ This project DID NOT HAVE ANY LICENSE GRANTED ORIGINALLY, so I would prefer to m
 
 ## Current Status
 
-The original project stopped for 2 days, this fork will continue after it confirm stopped.
+The original project updated 8 days ago and confirm stopped.
+
+This fork will continue in next few days.
 
 ## TODO List
 - [x] Create README
@@ -44,7 +46,9 @@ The original project stopped for 2 days, this fork will continue after it confir
 
 ## 当前状态
 
-原项目已停止2天，该分支将在原项目确认停止后开始。
+原项目于8天前更新，确认停止。
+
+该分支将在几天内开始。
 
 ## 计划表
 - [x] 创建README

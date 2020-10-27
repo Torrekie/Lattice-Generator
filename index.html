@@ -38,11 +38,12 @@
         </input>
         <input type="number" id="numbercolor" title="格纹密度上限" value="3"/>
         <input type="button" id="GeButton2" title="您可以在上方自定义三个主色以及条纹密度，随机生成辅色和条纹位置" value="Semi-Auto(半随机)"  onclick="onLoad(0)" />
+        <button onclick="predown()" id="down" tab="下载成品文件">下载</button>
         
         
         <div id="div_svg" style="position:absolute;">
             <div id="svg_img">
-                <svg id="svg_my" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+                <svg id="svg_my" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:fixed; left: 50%;"></svg>
                 <div id="img_mask" style="z-index: 1; position: absolute; left:0px; top:0px;"></div>
             </div>
         </div>

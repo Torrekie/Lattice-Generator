@@ -1,6 +1,28 @@
 //---------------------------------------界面按钮功能触发--------------------------------------
 function FAQ() {
     alert("Q:图片可以下载吗？\nA:由于开发时间有限，您只能截图（无限高清放大）而不是直接下载图片。\nQ:如何制作格裙样机？\nA:。\nQ:如何制作格裙？\nA:找别人帮你做。\nQ:成图可以商用吗？\nA:我认为店主不会要。\nQ:这个工具怎么使用？\nA:点击页面下方\'月亮猹\'观看教程视频。\nQ:为什么有的图有bug？\nA:因为开发者累了。\nQ:你还有什么问题？\nA:你没有了。");
+    alert(document.getElementById("svg_img").innerHTML);
+}
+function download(filename, content) {
+    var blob = new Blob([content], {type: 'text/plain'});
+    var url = window.URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    
+    a.style = "display: none";
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    
+    setTimeout(function () {
+               document.body.removeChild(a);
+               window.URL.revokeObjectURL(url);
+               }, 5);
+}
+function predown() {
+    var filename = (new Date()).getTime() + ".txt";
+    var content = document.getElementById("svg_img").innerHTML;
+    download(filename, content);
 }
 var MaskArray = [ "bag", "Bigunderpants", "bottle", "bowtie", "camera", "fakeskirt", "notebook", "Ordinaryskirt" ];
 // 获取窗口的宽度和高度，不包括滚动条
